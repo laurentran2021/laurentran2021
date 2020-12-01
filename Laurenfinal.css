@@ -166,6 +166,12 @@ a:hover{
     margin-right: 120px;
 }
 
+.claimspotting-image{
+    display: block;
+    width: 600px;
+    margin: auto;
+}
+
 /*css for claimspotting comments*/
 #respond {
     margin-top: 40px;
