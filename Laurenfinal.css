@@ -1,0 +1,261 @@
+main{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*css for home page/projects page*/
+.projects-wrapper{
+    vertical-align: auto;
+    display: flex;
+}
+
+.project{
+    display: block;
+    height: 450px;
+    width: 400px;
+    background-color: #FFDCDC;
+    margin: 30px;
+}
+
+.project-name{
+    font-family: optima;
+    font-size: 25px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.project-image{
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+
+.project-info{
+    display: block;
+    font-family: optima;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+}
+
+/*css for menu*/
+nav.top-menu{
+    background-color: #FFDCDC;
+    font-family: optima;
+    color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+}
+
+nav.top-menu li{
+    display: inline-block;
+    width: 100px
+    margin: 10px;
+    user-select: none;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+
+nav.top-menu li:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    font-family: optima;
+    font-size: 30px;
+    border: solid;
+    margin: 5px;
+    border-color: black;
+    width: 240px;
+    display: inline-block;
+    padding: 15px;
+}
+
+
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*css for bio*/
+.bio-block{
+    padding-top: 70px;
+}
+
+.headshot{
+    width: 400px;
+    height: 500px;
+    float: left;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.bio{
+    font-family: optima;
+    margin: 100px;
+    font-size: 20px;
+}
+
+/*css for claim spotting more information page*/
+.claimspotting-heading{
+    font-family: optima;
+    font-size: 30px;
+    border: solid;
+    border-color: black;
+    width: 200px;
+    display: block;
+    padding: 15px;
+    margin: auto;
+}
+
+.claimspotting-info{
+    display: block;
+    font-family: optima;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-content: center;
+}
+
+.claimspotting-abstract{
+    display: block;
+    font-family: optima;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.claimspotting-abstract-wrapper{
+    background-color: #FFDCDC;
+    display: block;
+    padding: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.claimspotting-description{
+    font-family: optima;
+    font-size: 15px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: block;
+}
+
+.claimspotting-heading2{
+    font-family: optima;
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/*css for claimspotting comments*/
+#respond {
+    margin-top: 40px;
+    font-family: optima;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  
+#respond input[type='text'],
+#respond input[type='email'], 
+#respond textarea {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 1.4em;
+  }
+
+/* css for resume*/
+.resume-logo{
+    font-family: optima;
+    font-size: 30px;
+    border: solid;
+    margin: 5px;
+    border-color: black;
+    width: 240px;
+    display: block;
+    padding: 15px;
+    margin: auto;
+}
+
+.resume-header{
+    font-family: optima;
+    font-size: 15px;
+    text-align: center;
+}
+
+.experiences{
+    font-family: optima;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.resume-heading{
+    text-decoration-line: underline;
+    font-family: optima;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.position, .title {
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 0px;
+}
+
+.company, .class {
+    display: inline;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.time, .contact{
+    display: inline;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.work-description, .bullet{
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-right: 15px;
+}
+/*css for contact page*/
+.email{
+    font-family: optima;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
