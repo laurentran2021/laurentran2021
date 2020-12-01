@@ -27,7 +27,7 @@
         </p>
         <p class="claimspotting-description">We first read  through the Congressional Record and created a list of sections that we believed were not of high priority to journalists. For example, the Congressional Record contains all of the ritual proceedings such as a morning prayer and the Pledge of Allegiance as well as honorary obituaries and recognitions. The list of unimportant sections also contained the section entitled “Daily Digest” which is a summary of proceedings, as well as sections that contained long lists of names and names of bills. 
         </p>
-        <img src="final-images/congressionalrecord.jpg" class="claimspotting-image">
+        <img src="final-images/congressionalrecord.jpg" class="claimspotting-image" alt"photo of the US Congressional Record with section titles highlighted">
         <h2 class="claimspotting-heading2">Processing The Record</h2>
         </p>
         <p class="claimspotting-description">Once we knew what to filter out of the Congressional Record, we used the Congressional Record API to extract the record and sort it into sections. We used natural language processing through the Natural Language Tool Kit and Text Blob to filter out the sections that had titles in our manually curated list. To filter out acts, bills, and other pieces of law that might be quoted in the record, we used heuristics such as sections that started with an open parenthesis or numeric values because those indicated quoted, factual information. 
@@ -43,7 +43,7 @@
         <h2 class="claimspotting-heading2">Creating the Amazon MTurk Survey</h2>
         <p class="claimspotting-description">To crowdsource fact check worthiness, we looked at Harcup and O’Neil’s research into newsworthiness criteria. Of their list of 11 criteria, we chose 4: relevance (personal, societal, economic, and political), conflict, magnitude, and surprise. We created a survey through Amazon MTurk that showed MTurk workers a sentence from the Congressional Record as well as a few sentences of context from before and after the sentence. The workers rated the extent to which they agreed or disagreed with sentences such as: “This statement is personally relevant” and “This statement is surprising or unexpected.” The output of the MTurk survey was a spreadsheet containing each sentence as well as its scoring in terms of the seven news criteria plus  an overall average newsworthiness score. 
         </p>
-        <img src='final-images/claimspotting-mturk.png' class="claimspotting-image">
+        <img src='final-images/claimspotting-mturk.png' class="claimspotting-image" "photo of an example question from the Amazon MTurk survey">
         <h2 class="claimspotting-heading2">Errors in Results</h2>
         <p class="claimspotting-description">Once we have received the ratings from the MTurk crowdsourcing, we will have two distinct sources of feedback on our claims. We will be considering the claims that have exceeded the initial threshold and which have returned crowdsourcing results as well. Our intention with adding this additional layer of validation is to eliminate as many false positives as possible from the initial Claimbuster round. For instance, if a claim scored very highly in Claimbuster but turned out lower ratings in MTurk, then that could be an indication of a false positive and will receive a lower weight for consideration. Although it is less impactful for our final deliverable, we may also consider weighting false negatives higher if they scored lower on Claimbuster but scored highly in Mturk. Ultimately, we calculated our error as a weighted F-score, using a beta value that weights false positives more than false negatives. 
         </p>
@@ -56,7 +56,7 @@
         <h2 class="claimspotting-heading2">Final Deliverable Mockup</h2>
         <p class="claimspotting-description">To get to our final deliverable of the newsletter, we created a script that automates the aforementioned process. First, we use the Congressional Record API to scrape the record and we use natural language process to filter out sections that are not important to fact check and to split the remaining section into individual sentences. Those sentences are sent to ClaimBuster and returned as a spreadsheet with the claims and their ClaimBuster score. We eliminate any sentences that have a ClaimBuster score of less than 0.5 and send the remaining claims through Amazon MTurk. The results of the MTurk test are returned in a spreadsheet and another script cleans the results, giving back a spreadsheet holding the claims with their MTurk scores for each newsworthy scale (relevance, conflict, surprise, and magnitude).
         </p>
-        <img src="final-images/Claim-Spotting.png" class="claimspotting-image">
+        <img src="final-images/Claim-Spotting.png" class="claimspotting-image" alt="image of the ClaimSpotting final newsletter">
         <h2 class="claimspotting-heading2">Final Ranking</h2>
         <p class="claimspotting-description">To compile the final ranking of claims, our goal was to create an algorithm that would score the claims based on both the ClaimBuster and MTurk scores, taking into account the error rate of both. </p>
     </main>
